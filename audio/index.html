@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>Audio</title>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="left_bar">
+                <div class="album-name">
+                    <h1>Deadlocked</h1>
+                </div>
+                <div class="songs-name">
+                    <h2 id="song-name">1. Wham Wham</h2>
+                </div>
+                <div class="controls">
+                    <button id="sound_button" onclick="mute()"><img id="sound_img" src="./img/audio.png" alt="audio"></button>
+                    <button onclick="previous()"><img src="./img/previous.png" alt="previous"></button>
+                    <button id="play_button" onclick="play()"><img id="play_img" src="./img/play.png" alt="play"></button>
+                    <button onclick="next()"><img src="./img/next.png" alt="next"></button>
+                </div>
+            </div>
+            <div class="right_bar">
+                <img src="./img/deadlocked.jpg" alt="deadlocked" width="200px">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
