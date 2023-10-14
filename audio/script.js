@@ -39,25 +39,33 @@ function unmute(){
 }
 
 function previous(){
-    if(count != 0) {
-        music[count][0].currentTime = 0;
-        music[count][0].pause();
+    music[count][0].currentTime = 0;
+    music[count][0].pause();
+
+    if(count == 0){
+        count = music.length-1;
+    }else{
         count--;
-        document.getElementById("play_img").setAttribute("src", "img/pause.png");
-        document.getElementById("song-name").innerHTML = music[count][1];
-        music[count][0].play();
     }
+
+    document.getElementById("play_img").setAttribute("src", "img/pause.png");
+    document.getElementById("song-name").innerHTML = music[count][1];
+    music[count][0].play();
 }
 
 function next(){
-    if(count != (music.length-1)) {
-        music[count][0].currentTime = 0;
-        music[count][0].pause();
+    music[count][0].currentTime = 0;
+    music[count][0].pause();
+
+    if(count == music.length-1){
+        count = 0;
+    }else{
         count++;
-        document.getElementById("play_img").setAttribute("src", "img/pause.png");
-        document.getElementById("song-name").innerHTML = music[count][1];
-        music[count][0].play();
     }
+
+    document.getElementById("play_img").setAttribute("src", "img/pause.png");
+    document.getElementById("song-name").innerHTML = music[count][1];
+    music[count][0].play();
 }
 
 function play(){
